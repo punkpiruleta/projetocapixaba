@@ -1,0 +1,62 @@
+import sys
+from PyQt5 import QtCore, uic, QtWidgets
+
+# Classe para a janela de Cancelar
+class JanelaCancelar(QtWidgets.QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("cancelamento.ui", self)  # Substitua pelo nome do arquivo .ui da nova janela de cancelar
+
+        # Conecte os botões ou adicione funcionalidades específicas da janela de Cancelar
+        # Aqui, você pode adicionar a lógica necessária para a janela de Cancelar
+
+# Classe para a janela principal
+class PaginaPrincipal(QtWidgets.QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("pagina_principal.ui", self)  # Carrega a interface da página principal
+
+        # Conecta o botão "Cancelar" ao método abrir_cancelamento
+        self.f2camadas_2.clicked.connect(self.abrir_cancelamento)
+
+    def abrir_cancelamento(self):
+        self.janela_cancelamento = JanelaCancelar()
+        self.janela_cancelamento.show()
+
+# Classe para a janela de login
+class LoginWindow(QtWidgets.QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("pro_caixa_logi.ui", self)  # Carrega a interface de login
+
+        # Credenciais válidas (substitua por suas próprias credenciais)
+        self.credenciais_validas = {
+            "usuario": "wesley",
+            "senha": "caxiado99"
+        }
+        
+        # Conecta a função fucao_principal ao botão de login
+        self.pushButton.clicked.connect(self.fucao_principal)
+        
+    def fucao_principal(self):
+        usuario = self.lineEdit.text()
+        senha = self.lineEdit_2.text()
+        print(usuario)
+        print(senha)
+
+        if usuario == self.credenciais_validas["usuario"] and senha == self.credenciais_validas["senha"]:
+            print("Login bem-sucedido!")
+            self.open_pagina_principal()
+        else:
+            print("Credenciais inválidas. Tente novamente.")
+    
+    def open_pagina_principal(self):
+        self.close()  # Fecha a janela de login
+        self.pagina_principal = PaginaPrincipal()  # Cria uma instância da janela principal
+        self.pagina_principal.show()  # Exibe a janela principal
+
+if __name__ == "__main__":
+    app = QtWidgets.QApplication(sys.argv)
+    login_window = LoginWindow()
+    login_window.show()
+    sys.exit(app.exec_())
