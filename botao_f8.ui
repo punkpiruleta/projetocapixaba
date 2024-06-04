@@ -40,14 +40,17 @@ border:2px solid rgb(161, 161, 161);
 border-radius: 5px;
 </string>
     </property>
+    <property name="text">
+     <string/>
+    </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>40</y>
-      <width>151</width>
-      <height>16</height>
+      <y>35</y>
+      <width>221</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
@@ -59,7 +62,7 @@ border-radius: 5px;
      </font>
     </property>
     <property name="text">
-     <string>Codigo Do Produto </string>
+     <string>Nome  ou Codigo do  Produto </string>
     </property>
    </widget>
    <widget class="QFrame" name="frame">
@@ -87,14 +90,32 @@ border-radius:10px;</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
+    <widget class="QLabel" name="produto">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>30</y>
+       <width>361</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>22</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>produto</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QFrame" name="frame_2">
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>340</y>
+      <y>350</y>
       <width>161</width>
-      <height>61</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -107,14 +128,32 @@ border-radius:10px;</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
+    <widget class="QLabel" name="codigo">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>10</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>22</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>000</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QFrame" name="frame_3">
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>340</y>
+      <y>350</y>
       <width>161</width>
-      <height>61</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -127,14 +166,32 @@ border-radius:10px;</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
+    <widget class="QLabel" name="preco">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>22</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>0,00</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>310</y>
+      <y>320</y>
       <width>151</width>
-      <height>16</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
@@ -153,9 +210,9 @@ border-radius:10px;</string>
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>310</y>
+      <y>320</y>
       <width>151</width>
-      <height>16</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
@@ -167,7 +224,7 @@ border-radius:10px;</string>
      </font>
     </property>
     <property name="text">
-     <string>Acima de x KG</string>
+     <string>Codigo Produto</string>
     </property>
    </widget>
    <widget class="Line" name="line">
@@ -199,8 +256,8 @@ border-radius:10px;</string>
    <widget class="Line" name="line_3">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>310</y>
+      <x>180</x>
+      <y>320</y>
       <width>131</width>
       <height>20</height>
      </rect>
@@ -212,23 +269,10 @@ border-radius:10px;</string>
    <widget class="Line" name="line_4">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>310</y>
-      <width>31</width>
+      <x>420</x>
+      <y>320</y>
+      <width>41</width>
       <height>20</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="Line" name="line_5">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>40</y>
-      <width>81</width>
-      <height>16</height>
      </rect>
     </property>
     <property name="orientation">
